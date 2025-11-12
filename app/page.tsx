@@ -1,20 +1,17 @@
 import Link from 'next/link';
 import { BookOpen, ArrowRight } from 'lucide-react';
+import path from "path";
+import fs from "fs/promises";
 
-async function getCourses() {
+export async function getCourses() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/courses/courses.json`, {
-      cache: 'force-cache'
-    });
-    
-    if (!res.ok) {
-      throw new Error('Failed to fetch courses');
-    }
-    
-    const data = await res.json();
-    return data.courses;
+    const filePath = path.join(process.cwd(), "public", "courses", "courses.json");
+    const fileContents = await fs.readFile(filePath, "utf-8");
+    const data = JSON.parse(fileContents);
+
+    return data.courses ?? [];
   } catch (error) {
-    console.error('Error loading courses:', error);
+    console.error("Error loading courses:", error);
     return [];
   }
 }
@@ -102,7 +99,7 @@ export default async function HomePage() {
       {/* Footer */}
       <footer className="mt-16 py-8 border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-          <p>© 2024 منصة الاختبارات - جميع الحقوق محفوظة</p>
+          <p> منصة الاختبارات - جميع الحقوق محفوظة لي برمجيات رابع</p>
         </div>
       </footer>
     </div>

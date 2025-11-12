@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, FileQuestion, Clock, Award, Home } from 'lucide-react';
+import path from "path";
+import fs from "fs/promises";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -12,15 +14,10 @@ export const dynamicParams = false;
 // Generate static params for all courses
 export async function generateStaticParams() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/courses/courses.json`, {
-      cache: 'no-store'
-    });
+    const filePath = path.join(process.cwd(), "public", "courses", "courses.json");
+    const fileContents = await fs.readFile(filePath, "utf-8");
+    const data = JSON.parse(fileContents);
     
-    if (!res.ok) {
-      return [];
-    }
-    
-    const data = await res.json();
     return data.courses.map((course: any) => ({
       id: course.id,
     }));
@@ -30,20 +27,15 @@ export async function generateStaticParams() {
   }
 }
 
-async function getCourseData(courseId: string) {
+export async function getCourseData(courseId: string) {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/courses/courses.json`, {
-      cache: 'force-cache' // Use cache for SSG
-    });
-    
-    if (!res.ok) {
-      throw new Error('Failed to fetch courses');
-    }
-    
-    const data = await res.json();
-    return data.courses.find((course: any) => course.id === courseId);
+    const filePath = path.join(process.cwd(), "public", "courses", "courses.json");
+    const fileContents = await fs.readFile(filePath, "utf-8");
+    const data = JSON.parse(fileContents);
+
+    return data.courses.find((course: { id: string }) => course.id === courseId) ?? null;
   } catch (error) {
-    console.error('Error loading course:', error);
+    console.error("Error loading course:", error);
     return null;
   }
 }
