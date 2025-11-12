@@ -276,9 +276,11 @@ return (
           </span>
           <Link
             href="/"
-            className="text-indigo-600 hover:text-indigo-700 font-medium"
+            className=" text-indigo-600 hover:text-indigo-700 font-medium"
           >
+            <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium">
             العودة
+            </span>
           </Link>
         </div>
 
@@ -303,13 +305,13 @@ return (
         </div>
 
         {/* Answer Options */}
-        <div className="space-y-2 mb-4">
+        <div className="space-y-2 mb-4 font-bold">
           {isTrueFalse ? (
             <>
               <button
                 onClick={() => handleAnswerSelect(true)}
                 disabled={isAnswered}
-                className={`w-full text-right p-3 rounded-lg border transition-all text-sm ${
+                className={`w-full text-right p-3 rounded-lg border transition-all text-xl text-blue-950  ${
                   selectedAnswer === true
                     ? isAnswered
                       ? currentQuestion.correctAnswer === true
