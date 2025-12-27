@@ -1,0 +1,133 @@
+{
+  "quiz": {
+    "title": "Chapter 7: Use-Case Modeling",
+    "sections": [
+      {
+        "name": "Multiple Choice Questions",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 1,
+            "question": "What is the primary purpose of use-case modeling?",
+            "options": [
+              "To design the system's database structure",
+              "To capture and communicate functional requirements from a user's perspective",
+              "To write the program code for the system",
+              "To test the system after implementation"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "To capture and communicate functional requirements from a user's perspective"
+          },
+          {
+            "id": 2,
+            "question": "Who or what is considered an 'actor' in use-case modeling?",
+            "options": [
+              "Only human users",
+              "Only external systems",
+              "Anyone or anything that interacts with the system to exchange information",
+              "Only the system itself"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Anyone or anything that interacts with the system to exchange information"
+          },
+          {
+            "id": 3,
+            "question": "What does a use-case narrative describe?",
+            "options": [
+              "The system's hardware requirements",
+              "The business event and how the user interacts with the system to complete a task",
+              "The cost of system development",
+              "The system's programming language"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "The business event and how the user interacts with the system to complete a task"
+          },
+          {
+            "id": 4,
+            "question": "What is an 'extends' relationship in use-case modeling?",
+            "options": [
+              "A relationship where one use case depends on another",
+              "A relationship where two use cases are identical",
+              "A relationship where an extension use case adds steps to another use case",
+              "A relationship between two actors"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "A relationship where an extension use case adds steps to another use case"
+          },
+          {
+            "id": 5,
+            "question": "What is the first step in the process of use-case modeling?",
+            "options": [
+              "Document use-case narratives",
+              "Draw use-case diagrams",
+              "Identify business actors",
+              "Rank use cases by priority"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Identify business actors"
+          },
+          {
+            "id": 6,
+            "question": "What is a 'temporal event' in use-case modeling?",
+            "options": [
+              "An event triggered by a user",
+              "An event triggered by time",
+              "An event triggered by another system",
+              "An event triggered by data input"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "An event triggered by time"
+          },
+          {
+            "id": 7,
+            "question": "What is the purpose of a use-case dependency diagram?",
+            "options": [
+              "To show the system's hardware architecture",
+              "To list all actors in the system",
+              "To depict dependencies among use cases and aid in project planning",
+              "To design the user interface"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "To depict dependencies among use cases and aid in project planning"
+          },
+          {
+            "id": 8,
+            "question": "Which of the following is a benefit of use-case modeling?",
+            "options": [
+              "It writes the code automatically",
+              "It replaces the need for testing",
+              "It designs the database tables",
+              "It helps decompose the system into manageable pieces"
+            ],
+            "correctAnswer": 3,
+            "correctAnswerText": "It helps decompose the system into manageable pieces"
+          },
+          {
+            "id": 9,
+            "question": "What is an 'abstract use case'?",
+            "options": [
+              "A use case that combines common steps from multiple use cases to reduce redundancy",
+              "A use case with no actors",
+              "A use case that cannot be implemented",
+              "A use case that only system admins can access"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "A use case that combines common steps from multiple use cases to reduce redundancy"
+          },
+          {
+            "id": 10,
+            "question": "In use-case modeling, what does the 'depends on' relationship indicate?",
+            "options": [
+              "One actor inherits from another",
+              "One use case must be performed before another",
+              "One use case is optional",
+              "One actor can replace another"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "One use case must be performed before another"
+          }
+        ]
+      }
+    ]
+  }
+}

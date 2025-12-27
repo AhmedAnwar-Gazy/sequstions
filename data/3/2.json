@@ -1,0 +1,211 @@
+{
+  "quiz": {
+    "title": "System Analysis and Design Exam (Model 2)",
+    "sections": [
+      {
+        "name": "Multiple Choice Questions",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 1,
+            "question": "An ongoing activity that documents, manages, oversees the use of, and improves an organization's chosen methodology (the 'process') for system development.",
+            "options": [
+              "Project management",
+              "Risk management",
+              "Process management",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Process management"
+          },
+          {
+            "id": 2,
+            "question": "Software (usually purchased) used to translate and route data between different applications.",
+            "options": [
+              "Middleware",
+              "Customer Relationship Management (CRM)",
+              "Enterprise Resource Planning (ERP)",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "Middleware"
+          },
+          {
+            "id": 3,
+            "question": "The process of building a unified information system out of diverse components of purchased software, custom-built software, hardware, and networking.",
+            "options": [
+              "Object-oriented analysis and design",
+              "Object technology",
+              "Systems Integration",
+              "All of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Systems Integration"
+          },
+          {
+            "id": 4,
+            "question": "Raw facts about people, places, events, and things that are of importance in an organization.",
+            "options": [
+              "Information",
+              "Data",
+              "Knowledge",
+              "None of them"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Data"
+          },
+          {
+            "id": 5,
+            "question": "The specification or construction of a technical, computer-based solution for the business requirements identified in a system analysis.",
+            "options": [
+              "System initiation",
+              "System design",
+              "System analysis",
+              "None of them"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "System design"
+          },
+          {
+            "id": 6,
+            "question": "An experienced professional who accepts responsibility for planning, monitoring, and controlling projects with respect to schedule, budget, deliverables, customer satisfaction, technical standards, and system quality.",
+            "options": [
+              "External Service Provider (ESP)",
+              "E-Commerce",
+              "Project Manager",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Project Manager"
+          },
+          {
+            "id": 7,
+            "question": "To change a situation regardless of whether anyone has complained about the current situation.",
+            "options": [
+              "Directives",
+              "Opportunities",
+              "Problems",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "Directives"
+          },
+          {
+            "id": 8,
+            "question": "A technical specialist who translates system users' business requirements and constraints into technical solution. She or he designs the computer databases, inputs, outputs, screens, networks, and software that will meet the system users' requirements.",
+            "options": [
+              "System builder",
+              "Systems analyst",
+              "System designer",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "System designer"
+          },
+          {
+            "id": 9,
+            "question": "An information system's sponsor and executive advocate, usually responsible for funding the project of developing, operating, and maintaining the information system.",
+            "options": [
+              "Internal System Users",
+              "System owners",
+              "Executive managers",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Executive managers"
+          },
+          {
+            "id": 10,
+            "question": "A ________ is an information system that either helps to identify decision making opportunities or provides information to help make decisions.",
+            "options": [
+              "decision support system (DSS)",
+              "management information system (MIS)",
+              "transaction processing system (TPS)",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "decision support system (DSS)"
+          },
+          {
+            "id": 11,
+            "question": "A ________ is any person who has an interest in an existing or proposed information system. Stakeholders can be technical or nontechnical workers. They may also include both internal and external workers.",
+            "options": [
+              "Knowledge workers",
+              "Stakeholder",
+              "Information workers",
+              "None of them"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Stakeholder"
+          },
+          {
+            "id": 12,
+            "question": "An ________ system is an information system that supports the wide range of business office activities that provide for improved work flow between workers.",
+            "options": [
+              "Expert",
+              "communications and collaboration",
+              "office automation",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "office automation"
+          },
+          {
+            "id": 13,
+            "question": "A ________ a 'customer' who will use or is affected by an information system on a regular basis -- capturing, validating, entering, responding to, storing, and exchanging data and information.",
+            "options": [
+              "System users",
+              "System owners",
+              "Supervisors",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "System users"
+          },
+          {
+            "id": 14,
+            "question": "A ________ is a group of interrelated components that function together to achieve a desired result.",
+            "options": [
+              "System",
+              "information system (IS)",
+              "Information technology",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "System"
+          },
+          {
+            "id": 15,
+            "question": "A ________ a satirical term coined to describe a common project condition in which excessive system modeling dramatically slows progress toward implementation of the intended system solution.",
+            "options": [
+              "Analysis paralysis",
+              "Logical design",
+              "System model",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "Analysis paralysis"
+          }
+        ]
+      },
+      {
+        "name": "Essay Questions",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 16,
+            "question": "What are the Skills Needed by the Systems Analyst?",
+            "correctAnswer": "",
+            "correctAnswerText": "1. Working knowledge of information technology\n2. Computer programming experience and expertise\n3. General business knowledge\n4. General problem-solving skills\n5. Good interpersonal communication skills\n6. Good interpersonal relations skills\n7. Flexibility and adaptability\n8. Character and ethics"
+          },
+          {
+            "id": 17,
+            "question": "What are the types of e-commerce and e-business?",
+            "correctAnswer": "",
+            "correctAnswerText": "1. Marketing of corporate image, products, and services\n2. Business-to-consumer (B2C)\n3. Business-to-business (B2B)"
+          }
+        ]
+      }
+    ]
+  }
+}

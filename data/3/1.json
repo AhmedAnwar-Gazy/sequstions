@@ -1,0 +1,211 @@
+{
+  "quiz": {
+    "title": "System Analysis and Design Exam",
+    "sections": [
+      {
+        "name": "Multiple Choice Questions",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 1,
+            "question": "A specialist who studies the problems and needs of an organization to determine how people, data, processes, and information technology can best accomplish improvements for the business.",
+            "options": [
+              "System designer",
+              "System builder",
+              "Systems analyst",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Systems analyst"
+          },
+          {
+            "id": 2,
+            "question": "Either real or anticipated, that require corrective action.",
+            "options": [
+              "Opportunities",
+              "Problems",
+              "Directives",
+              "None of them"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Problems"
+          },
+          {
+            "id": 3,
+            "question": "Users whose location is constantly changing but who require access to information systems from any location.",
+            "options": [
+              "System users",
+              "Mobile users",
+              "Remote users",
+              "None of them"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Mobile users"
+          },
+          {
+            "id": 4,
+            "question": "A systems analyst, system designer, or system builder who sells his or her expertise and experience to other businesses to help those businesses purchase, develop, or integrate their information systems solutions.",
+            "options": [
+              "E-Commerce",
+              "Project Manager",
+              "External Service Provider (ESP)",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "External Service Provider (ESP)"
+          },
+          {
+            "id": 5,
+            "question": "An ________ is an arrangement of people, data, processes, and information technology that interact to collect, process, store, and provide as output the information needed to support an organization.",
+            "options": [
+              "Information technology",
+              "System",
+              "Information system (IS)",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Information system (IS)"
+          },
+          {
+            "id": 6,
+            "question": "Data that has been processed or reorganized into a more meaningful form for someone.",
+            "options": [
+              "Data",
+              "Knowledge",
+              "Information",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Information"
+          },
+          {
+            "id": 7,
+            "question": "A collection of tools and techniques for systems development that will utilize object technologies to construct a system and its software.",
+            "options": [
+              "Object technology",
+              "Object-oriented analysis and design",
+              "Systems Integration",
+              "All of them"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Object-oriented analysis and design"
+          },
+          {
+            "id": 8,
+            "question": "A ________ is an information system that provides for management oriented reporting based on transaction processing and operations of the organization.",
+            "options": [
+              "transaction processing system (TPS)",
+              "decision support system (DSS)",
+              "management information system (MIS)",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "management information system (MIS)"
+          },
+          {
+            "id": 9,
+            "question": "A software application that provides customers with access to a business's processes from initial inquiry through post sale service and support.",
+            "options": [
+              "Customer Relationship Management (CRM)",
+              "Middleware",
+              "Enterprise Resource Planning (ERP)",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "Customer Relationship Management (CRM)"
+          },
+          {
+            "id": 10,
+            "question": "The study of a business problem domain to recommend improvements and specify the business requirements and priorities for the solution.",
+            "options": [
+              "System design",
+              "System initiation",
+              "System analysis",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "System analysis"
+          },
+          {
+            "id": 11,
+            "question": "________ are a subset of information workers whose responsibilities are based on a specialized body of knowledge.",
+            "options": [
+              "Information workers",
+              "Knowledge workers",
+              "Stakeholder",
+              "None of them"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Knowledge workers"
+          },
+          {
+            "id": 12,
+            "question": "The process of identifying, evaluating, and controlling what might go wrong in a project before it becomes a threat to the successful completion of the project or implementation of the information system.",
+            "options": [
+              "Risk management",
+              "Process management",
+              "Project management",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "Risk management"
+          },
+          {
+            "id": 13,
+            "question": "A picture of a system that represents reality or a desired reality. System models facilitate improved communication between system users, system analysts, system designers, and system builders.",
+            "options": [
+              "System model",
+              "Analysis paralysis",
+              "Logical design",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "System model"
+          },
+          {
+            "id": 14,
+            "question": "A ________ system is an information system that enables more effective communications between workers, partners, customers, and suppliers to enhance their ability to collaborate.",
+            "options": [
+              "communications and collaboration",
+              "Expert",
+              "office automation",
+              "None of them"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "communications and collaboration"
+          },
+          {
+            "id": 15,
+            "question": "An information system's sponsor and executive advocate, usually responsible for funding the project of developing, operating, and maintaining the information system.",
+            "options": [
+              "Supervisors",
+              "System users",
+              "System owners",
+              "None of them"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "System owners"
+          }
+        ]
+      },
+      {
+        "name": "Essay Questions",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 16,
+            "question": "What are the general problem-solving approach?",
+            "correctAnswer": "",
+            "correctAnswerText": "1. Identify the problem.\n2. Analyze and understand the problem.\n3. Identify solution requirements or expectations.\n4. Identify alternative solutions and choose the 'best' course of action.\n5. Design the chosen solution.\n6. Implement the chosen solution.\n7. Evaluate the results. If the problem is not solved, return to step 1 or 2 as appropriate."
+          },
+          {
+            "id": 17,
+            "question": "What are the Technology Drivers for Today's Information Systems?",
+            "correctAnswer": "",
+            "correctAnswerText": "1. Networks and the Internet\n2. Mobile and Wireless Technologies\n3. Object Technologies\n4. Collaborative Technologies\n5. Enterprise Applications"
+          }
+        ]
+      }
+    ]
+  }
+}

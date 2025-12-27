@@ -1,0 +1,193 @@
+{
+  "quiz": {
+    "title": "Chapter 8: Data Modeling",
+    "sections": [
+      {
+        "name": "Multiple Choice Questions",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 1,
+            "question": "What is the primary goal of data modeling?",
+            "options": [
+              "To design the user interface",
+              "To organize and document a system's data",
+              "To write program code",
+              "To test system performance"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "To organize and document a system's data"
+          },
+          {
+            "id": 2,
+            "question": "What is an 'entity' in data modeling?",
+            "options": [
+              "A single piece of data",
+              "A relationship between tables",
+              "A class of persons, places, objects, events, or concepts about which data is stored",
+              "A type of database software"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "A class of persons, places, objects, events, or concepts about which data is stored"
+          },
+          {
+            "id": 3,
+            "question": "What is an 'attribute' in data modeling?",
+            "options": [
+              "A descriptive property or characteristic of an entity",
+              "A connection between two entities",
+              "A unique identifier for a database",
+              "A type of data relationship"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "A descriptive property or characteristic of an entity"
+          },
+          {
+            "id": 4,
+            "question": "What is a 'primary key'?",
+            "options": [
+              "An optional attribute",
+              "A foreign key from another table",
+              "A candidate key used to uniquely identify a single entity instance",
+              "A duplicate attribute in two entities"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "A candidate key used to uniquely identify a single entity instance"
+          },
+          {
+            "id": 5,
+            "question": "What does 'cardinality' describe in a relationship?",
+            "options": [
+              "The name of the relationship",
+              "The minimum and maximum number of occurrences of one entity related to another",
+              "The data type of an attribute",
+              "The degree of normalization"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "The minimum and maximum number of occurrences of one entity related to another"
+          },
+          {
+            "id": 6,
+            "question": "What is a 'foreign key'?",
+            "options": [
+              "A key that is never used",
+              "A primary key of one entity that is duplicated in another entity to identify a relationship",
+              "A temporary key during data entry",
+              "A key used only in reports"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "A primary key of one entity that is duplicated in another entity to identify a relationship"
+          },
+          {
+            "id": 7,
+            "question": "What is a 'recursive relationship'?",
+            "options": [
+              "A relationship between three entities",
+              "A relationship between instances of the same entity",
+              "A relationship that is always one-to-one",
+              "A relationship that cannot be modeled"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "A relationship between instances of the same entity"
+          },
+          {
+            "id": 8,
+            "question": "What is an 'associative entity'?",
+            "options": [
+              "An entity with no attributes",
+              "An entity that inherits its primary key from more than one parent entity",
+              "An entity that cannot have relationships",
+              "An entity used only in documentation"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "An entity that inherits its primary key from more than one parent entity"
+          },
+          {
+            "id": 9,
+            "question": "What is a 'nonspecific relationship'?",
+            "options": [
+              "A one-to-one relationship",
+              "A relationship between a parent and child",
+              "A many-to-many relationship",
+              "A relationship with no cardinality"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "A many-to-many relationship"
+          },
+          {
+            "id": 10,
+            "question": "What is 'normalization' in data modeling?",
+            "options": [
+              "Adding more attributes to an entity",
+              "Deleting all foreign keys",
+              "A technique to organize data into nonredundant, stable, and flexible groups",
+              "A method to increase data duplication"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "A technique to organize data into nonredundant, stable, and flexible groups"
+          },
+          {
+            "id": 11,
+            "question": "What is 'first normal form (1NF)'?",
+            "options": [
+              "An entity with no primary key",
+              "An entity whose attributes have no more than one value per instance",
+              "An entity with only one attribute",
+              "An entity in a many-to-many relationship"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "An entity whose attributes have no more than one value per instance"
+          },
+          {
+            "id": 12,
+            "question": "What is a 'compound attribute'?",
+            "options": [
+              "An attribute with no value",
+              "An attribute that consists of other attributes",
+              "An attribute that is a primary key",
+              "An attribute used only in reports"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "An attribute that consists of other attributes"
+          },
+          {
+            "id": 13,
+            "question": "What is a 'domain' in data modeling?",
+            "options": [
+              "The name of the database",
+              "The relationship between two entities",
+              "The number of instances in an entity",
+              "The set of legitimate values an attribute can take"
+            ],
+            "correctAnswer": 3,
+            "correctAnswerText": "The set of legitimate values an attribute can take"
+          },
+          {
+            "id": 14,
+            "question": "What is a 'weak entity'?",
+            "options": [
+              "An entity with no attributes",
+              "An entity whose primary key includes the primary key of another entity",
+              "An entity that is not used in the system",
+              "An entity with only one instance"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "An entity whose primary key includes the primary key of another entity"
+          },
+          {
+            "id": 15,
+            "question": "What does 'degree' refer to in a relationship?",
+            "options": [
+              "The importance of the relationship",
+              "The number of attributes in an entity",
+              "The number of entities that participate in the relationship",
+              "The level of normalization"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "The number of entities that participate in the relationship"
+          }
+        ]
+      }
+    ]
+  }
+}

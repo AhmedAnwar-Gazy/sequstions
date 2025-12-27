@@ -1,0 +1,193 @@
+{
+  "quiz": {
+    "title": "Chapter 6: Requirements Discovery",
+    "sections": [
+      {
+        "name": "Multiple Choice Questions",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 1,
+            "question": "What is the primary goal of requirements discovery?",
+            "options": [
+              "To write the final code for the system",
+              "To design the system's user interface",
+              "To identify or extract system problems and solution requirements from users",
+              "To test the system after implementation"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "To identify or extract system problems and solution requirements from users"
+          },
+          {
+            "id": 2,
+            "question": "What is a functional requirement?",
+            "options": [
+              "Something the information system must do",
+              "A property or quality the system must have",
+              "A constraint on system development time",
+              "A description of the system's hardware"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "Something the information system must do"
+          },
+          {
+            "id": 3,
+            "question": "Which of the following is a nonfunctional requirement?",
+            "options": [
+              "The system must process customer orders",
+              "The system must respond within 2 seconds",
+              "The system must generate monthly reports",
+              "The system must allow user login"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "The system must respond within 2 seconds"
+          },
+          {
+            "id": 4,
+            "question": "What is an Ishikawa diagram used for?",
+            "options": [
+              "To design database tables",
+              "To track project schedules",
+              "To identify, explore, and depict problems and their causes",
+              "To model system use cases"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "To identify, explore, and depict problems and their causes"
+          },
+          {
+            "id": 5,
+            "question": "Which fact-finding technique involves collecting a representative sample of documents and forms?",
+            "options": [
+              "Interviewing",
+              "Observation",
+              "Sampling",
+              "Questionnaires"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Sampling"
+          },
+          {
+            "id": 6,
+            "question": "What is a key advantage of using questionnaires in fact-finding?",
+            "options": [
+              "Allows observation of body language",
+              "Provides high response rate automatically",
+              "Can be answered quickly and allows anonymity",
+              "Guarantees all questions will be answered"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Can be answered quickly and allows anonymity"
+          },
+          {
+            "id": 7,
+            "question": "What is the most important and frequently used fact-finding technique?",
+            "options": [
+              "Questionnaires",
+              "Observation",
+              "Prototyping",
+              "Interviews"
+            ],
+            "correctAnswer": 3,
+            "correctAnswerText": "Interviews"
+          },
+          {
+            "id": 8,
+            "question": "In an interview, what is an open-ended question?",
+            "options": [
+              "A question with predefined answer choices",
+              "A question that allows the interviewee to respond freely",
+              "A question that restricts answers to yes or no",
+              "A question about system performance"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "A question that allows the interviewee to respond freely"
+          },
+          {
+            "id": 9,
+            "question": "What does 'proxemics' refer to in communication?",
+            "options": [
+              "The tone of voice used",
+              "The content of the message",
+              "The relationship between people and the space around them",
+              "The use of technical jargon"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "The relationship between people and the space around them"
+          },
+          {
+            "id": 10,
+            "question": "What is the purpose of discovery prototyping?",
+            "options": [
+              "To replace the final system",
+              "To write user documentation",
+              "To build a small-scale model to discover or verify user requirements",
+              "To train end-users after implementation"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "To build a small-scale model to discover or verify user requirements"
+          },
+          {
+            "id": 11,
+            "question": "Who typically acts as a facilitator in a JRP session?",
+            "options": [
+              "System sponsor",
+              "End-user",
+              "A trained person who guides the session",
+              "IT programmer"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "A trained person who guides the session"
+          },
+          {
+            "id": 12,
+            "question": "What is a key benefit of Joint Requirements Planning (JRP)?",
+            "options": [
+              "It eliminates the need for testing",
+              "It reduces user involvement",
+              "It actively involves users and management, reducing development time",
+              "It automates system coding"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "It actively involves users and management, reducing development time"
+          },
+          {
+            "id": 13,
+            "question": "Which of the following is a guideline for effective observation?",
+            "options": [
+              "Interrupt the worker to ask questions",
+              "Focus only on trivial activities",
+              "Keep a low profile and take notes",
+              "Assume you understand the process without verification"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Keep a low profile and take notes"
+          },
+          {
+            "id": 14,
+            "question": "What is a fixed-format questionnaire?",
+            "options": [
+              "A questionnaire with only essay questions",
+              "A questionnaire with predefined answer choices",
+              "A questionnaire used only in interviews",
+              "A questionnaire without any questions"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "A questionnaire with predefined answer choices"
+          },
+          {
+            "id": 15,
+            "question": "What does requirements management involve?",
+            "options": [
+              "Writing system code",
+              "Designing the database",
+              "Managing changes to requirements over the project lifecycle",
+              "Conducting final user training"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Managing changes to requirements over the project lifecycle"
+          }
+        ]
+      }
+    ]
+  }
+}
