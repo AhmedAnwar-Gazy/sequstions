@@ -1,0 +1,619 @@
+{
+  "quiz": {
+    "title": "اختبار نظم التشغيل والنظم الموزعة - نموذج B5",
+    "sections": [
+      {
+        "name": "الجزء الأول: أسئلة الصواب والخطأ",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 1,
+            "question": "يتم فصل واجهة المستخدم عن منطق الأعمال وقاعدة البيانات Multi-tier في معمارية.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "معمارية متعددة الطبقات تفصل المسؤوليات: واجهة المستخدم (Presentation)، منطق الأعمال (Business Logic)، وطبقة البيانات (Data Layer)."
+          },
+          {
+            "id": 2,
+            "question": "يعمل كوسيط لتسريع الاستجابة وتوفير الأمان للعملاء Proxy Server استخدام.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "خادم الوكيل (Proxy) يعمل كوسيط بين العميل والخادم، ويمكنه تخزين المحتوى مؤقتاً (Caching) لتحسين الأداء، وتوفير الحماية وإخفاء الهوية."
+          },
+          {
+            "id": 3,
+            "question": "في النظم الموزعة يعني أن جميع العقد لها نفس الدور والصلاحيات (Symmetry) التماثل.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الأنظمة المتماثلة (Symmetric) مثل نظير لنظير (P2P)، حيث لا يوجد دور مميز للعقد، على عكس الأنظمة غير المتماثلة (Asymmetric) مثل خادم-عميل."
+          },
+          {
+            "id": 4,
+            "question": "يعتبر Local Procedure Call أبطأ من Remote Procedure Call بسبب تعقيد الشبكة.",
+            "correctAnswer": false,
+            "correctAnswerText": "خطأ",
+            "explanation": "الاستدعاء المحلي (LPC) أسرع بكثير لأن التنفيذ يحدث داخل نفس مساحة العناوين، بينما RPC يتضمن نقل البيانات عبر الشبكة، مما يضيف تأخيراً كبيراً."
+          },
+          {
+            "id": 5,
+            "question": "خوارزمية Raft هي بديل لخوارزمية Paxos وتستخدم لتحقيق الإجماع (Consensus) في النظم الموزعة.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "Raft مصممة لتكون أكثر قابلية للفهم من Paxos مع تقديم ضمانات إجماع مكافئة. تستخدم في أنظمة موزعة مثل etcd وConsul."
+          },
+          {
+            "id": 6,
+            "question": "هي عملية تحديث أو حذف البيانات القديمة من المخزن المؤقت لضمان الاتساق Cache Invalidation الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "إبطال صلاحية الكاش هو تحديه كبير للحفاظ على الاتساق بين البيانات المخزنة مؤقتاً والبيانات الأصلية."
+          },
+          {
+            "id": 7,
+            "question": "في الأنظمة المتوازية من نوع SIMD، تنفذ جميع المعالجات تعليمات مختلفة على نفس البيانات.",
+            "correctAnswer": false,
+            "correctAnswerText": "خطأ",
+            "explanation": "SIMD تعني (Single Instruction, Multiple Data): جميع المعالجات تنفذ نفس التعليمة (Instruction) في نفس الوقت، ولكن على عناصر بيانات مختلفة."
+          },
+          {
+            "id": 8,
+            "question": "الـ Idempotent HTTP methods تشمل عمليات الـ GET والـ PUT والـ DELETE.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "في RESTful APIs، تعتبر الطرق GET وPUT وDELETE قابلة لإعادة التنفيذ (Idempotent)، بينما POST ليست كذلك."
+          },
+          {
+            "id": 9,
+            "question": "هو الفرق في القراءة بين ساعتين في لحظة زمنية معينة Clock Skew الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الانحراف الزمني (Clock Skew) هو الفرق المطلق بين قراءات ساعتين في نفس اللحظة."
+          },
+          {
+            "id": 10,
+            "question": "تعتبر الأنظمة الموزعة Loosely Coupled لأن المكونات مستقلة وتتواصل عبر الرسائل.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الاقتران الضعيف (Loose Coupling) يعني أن المكونات لها اعتماديات قليلة على بعضها البعض، مما يزيد من المرونة والقابلية للتطوير."
+          },
+          {
+            "id": 11,
+            "question": "الـ Horizontal Partitioning هو نفسه عملية الـ Sharding لقواعد البيانات.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "التقسيم الأفقي (Horizontal Partitioning) أو Sharding يعني تقسيم صفوف جدول قاعدة بيانات وتوزيعها عبر عقد مختلفة."
+          },
+          {
+            "id": 12,
+            "question": "في نظام الـ Publish-Subscribe، يتم توجيه الرسائل بناءً على الموضوع (Topic) وليس العنوان.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الناشرون (Publishers) يصنفون الرسائل بموضوع، والمشتركون (Subscribers) يعبرون عن اهتمامهم بمواضيع معينة."
+          },
+          {
+            "id": 13,
+            "question": "تهدف إلى كسر أحد شروط حدوث المأزق الأربعة قبل وقوعه Deadlock Prevention الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "منع الجمود (Deadlock Prevention) يضمن عدم استيفاء أحد شروط الجمود (التملك المتبادل، انتظار أثناء التملك، عدم إمكانية الاستيلاء، الانتظار الدائري)."
+          },
+          {
+            "id": 14,
+            "question": "تسمح بكشف الأحداث التي وقعت بشكل متوازٍ (Concurrent) بدقة أكبر من ساعات لامبورت Vector Clocks الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الساعات المتجهة (Vector Clocks) تحافظ على متجه من العدادات (واحد لكل عقدة)، مما يسمح باكتشاف التزامن بشكل دقيق."
+          },
+          {
+            "id": 15,
+            "question": "تسمح بتشغيل برامج أكبر من حجم الذاكرة الفيزيائية المتاحة Virtual Memory تقنية.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الذاكرة الافتراضية تستخدم مساحة تخزين ثانوية (مثل القرص الصلب) لتوسيع مساحة العناوين المتاحة للعمليات."
+          },
+          {
+            "id": 16,
+            "question": "الـ At-most-once semantics في RPC تضمن تنفيذ الإجراء مرة واحدة على الأكثر رغم الفشل.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "دلالات \"مرة واحدة على الأكثر\" تعني أنه لن يتم تنفيذ الاستدعاء أكثر من مرة، حتى إذا فشل العميل واستعاد."
+          },
+          {
+            "id": 17,
+            "question": "قد يؤدي إلى ظهور مشكلة \"Split-brain\" حيث يظن جزأين من النظام أنهما القائد Network Partition الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "عند انقسام الشبكة، قد تنتخب مجموعات معزولة قائداً خاصاً بها، مما يؤدي إلى تناقض في الحالة إذا لم يتم التعامل معه بشكل صحيح."
+          },
+          {
+            "id": 18,
+            "question": "تسمح لنظام التشغيل بإيقاف خيط تنفيذ لمنح المعالج لخيط آخر Pre-emptive Scheduling الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الجدولة القابلة للاستيلاء (Pre-emptive) تسمح لنظام التشغيل بانتزاع المعالج من خيط أو عملية قيد التنفيذ."
+          },
+          {
+            "id": 19,
+            "question": "يسمح بالوصول للملفات من عدة أجهزة كما لو كانت محلية (DFS) Distributed File System الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "نظام الملفات الموزع (مثل NFS، HDFS) يوفر واجهة موحدة للوصول إلى الملفات المخزنة على عقد مختلفة عبر الشبكة."
+          },
+          {
+            "id": 20,
+            "question": "هي قدرة النظام على الاستمرار بمهام جزئية عند فشل بعض مكوناته Graceful Degradation الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "التحلل الأنيق (Graceful Degradation) يعني أن النظام يقلل من وظائفه بشكل منظم عند حدوث فشل، بدلاً من الانهيار التام."
+          },
+          {
+            "id": 21,
+            "question": "في الـ Strict Consistency، يجب أن يرى جميع المشاهدين التحديث في نفس اللحظة المطلقة.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الاتساق الصارم (الذي يُعتبر نظرياً) يعني أن التحديث يصبح مرئياً لجميع العمليات في نفس اللحظة الزمنية المطلقة، وهو غير قابل للتحقيق في الأنظمة الموزعة الحقيقية."
+          },
+          {
+            "id": 22,
+            "question": "هو النسخة الموجهة للكائنات (Object-Oriented) من الـ RPC (RMI) Remote Method Invocation الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "RMI هو امتداد لـ RPC يدعم استدعاء أساليب الكائنات عن بُعد، ويستخدم غالباً في Java."
+          },
+          {
+            "id": 23,
+            "question": "يقاس بعدد العمليات التي يفشل النظام في تنفيذها تحت الضغط Throughput الـ.",
+            "correctAnswer": false,
+            "correctAnswerText": "خطأ",
+            "explanation": "الإنتاجية (Throughput) تقيس عدد المهام أو العمليات التي يتم إكمالها بنجاح في وحدة زمنية."
+          },
+          {
+            "id": 24,
+            "question": "تعتمد على خادم يطلب الوقت من العقد ثم يرسل لهما متوسط التعديل Berkeley خوارزمية.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "خوارزمية Berkeley للتزامن الزمني تستخدم خادماً نشطاً يحسب متوسط الانحراف ويطلب من العملاء تعديل ساعاتهم."
+          },
+          {
+            "id": 25,
+            "question": "تعني أن \"شيئاً سيئاً لن يحدث أبداً\" في النظام الموزع Safety Property الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "خاصية السلامة (Safety) تضمن أن النظام لن يدخل حالة غير صالحة (مثل انتهاك الاتساق)."
+          },
+          {
+            "id": 26,
+            "question": "يمكن تنفيذه في طبقة الشبكة (Layer 4) أو طبقة التطبيقات (Layer 7) Load Balancing الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "موازنة الحمل على مستوى النقل (L4) تستخدم معلومات مثل عنوان IP والمنفذ، بينما على مستوى التطبيق (L7) يمكنها استخدام محتوى الطلب (مثل رأس HTTP)."
+          },
+          {
+            "id": 27,
+            "question": "يستخدم لضمان استعادة البيانات بعد الفشل في المعاملات الموزعة Write-ahead Logging الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "تسجيل مسبق (WAL) هو تقنية حيث يتم كتابة التغييرات في سجل (Log) قبل تطبيقها فعلياً على البيانات، مما يضمن القدرة على الاستعادة."
+          },
+          {
+            "id": 28,
+            "question": "تعني دائماً أن أداء الجهاز الواحد سيتحسن بإضافة أجهزة أخرى Scalability الـ.",
+            "correctAnswer": false,
+            "correctAnswerText": "خطأ",
+            "explanation": "التوسع (Scalability) يعني قدرة النظام على التعامل مع زيادة الحمل. التوسع الأفقي (إضافة أجهزة) لا يضمن تحسين أداء العقدة الفردية، بل أداء النظام الكلي."
+          },
+          {
+            "id": 29,
+            "question": "تعتمد على تقسيم التطبيق إلى خدمات صغيرة مستقلة تتواصل عبر الشبكة Microservices Architecture الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "معمارية الخدمات المصغرة (Microservices) هي أسلوب لتطوير الأنظمة الموزعة، حيث يتم فصل الوظائف إلى خدمات يمكن نشرها وتوسيع نطاقها بشكل مستقل."
+          },
+          {
+            "id": 30,
+            "question": "يمكن استخدامه كمصدر دقيق جداً لمزامنة الوقت في النظم الموزعة (GPS) Global Positioning System الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "تستخدم ساعات ذرية دقيقة على الأقمار الصناعية GPS، ويمكن استخدام إشارة GPS كمرجع زمني عالي الدقة لأنظمة التزامن مثل PTP (Precision Time Protocol)."
+          }
+        ]
+      },
+      {
+        "name": "الجزء الثاني: أسئلة الاختيار من متعدد",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 31,
+            "question": "أي من المعماريات التالية تصف نظاماً لا يوجد فيه خادم مركزي وكل عقدة لها نفس القدرات؟",
+            "options": [
+              "Client-Server",
+              "Peer-to-Peer",
+              "Mainframe",
+              "3-Tier Architecture"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Peer-to-Peer",
+            "explanation": "في معمارية نظير لنظير (P2P)، تكون جميع العقد متماثلة، وتعمل كعملاء وخوادم في الوقت ذاته، دون وجود سلطة مركزية."
+          },
+          {
+            "id": 32,
+            "question": "الـ \"Middleware\" يقع برمجياً بين:",
+            "options": [
+              "المعالج والذاكرة",
+              "نظام التشغيل والتطبيقات الموزعة",
+              "الشاشة ولوحة المفاتيح",
+              "القرص الصلب والإنترنت"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "نظام التشغيل والتطبيقات الموزعة",
+            "explanation": "الـ Middleware يوفر خدمات تشغيلية مشتركة للتطبيقات، ويجلس فوق نظام التشغيل ولكن تحت منطق التطبيق الخاص بالمستخدم."
+          },
+          {
+            "id": 33,
+            "question": "في بروتوكول الـ Two-Phase Commit، ماذا يحدث إذا صوتت عقدة واحدة بـ \"Abort\"؟",
+            "options": [
+              "يتم تنفيذ العملية في باقي العقد",
+              "يتم إلغاء العملية في جميع العقد",
+              "يتم تجاهل هذه العقدة",
+              "يتوقف النظام بالكامل عن العمل"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "يتم إلغاء العملية في جميع العقد",
+            "explanation": "يجب أن يوافق جميع المشاركين (COMMIT) لكي تلتزم المعاملة. أي تصويت بـ ABORT (أو فشل في الرد) يؤدي إلى قرار نهائي ABORT وتراجع جميع المشاركين."
+          },
+          {
+            "id": 34,
+            "question": "الـ \"Address Space\" المشترك هو ميزة أساسية لـ:",
+            "options": [
+              "الـ Processes",
+              "الـ Threads",
+              "الـ Clusters",
+              "الـ Distributed Systems"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "الـ Threads",
+            "explanation": "الخيوط (Threads) التي تنتمي لنفس العملية تتشارك مساحة العناوين (الذاكرة) للعملية الأم."
+          },
+          {
+            "id": 35,
+            "question": "أي من نماذج الاتساق التالية يوفر أقل ضمانات للمستخدم ولكنه الأعلى أداءً؟",
+            "options": [
+              "Sequential Consistency",
+              "Strong Consistency",
+              "Eventual Consistency",
+              "Causal Consistency"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "Eventual Consistency",
+            "explanation": "الاتساق النهائي (Eventual Consistency) يضعف ضمانات الاتساق لصالح التوافر والأداء، حيث سيتم نشر التحديثات في النهاية."
+          },
+          {
+            "id": 36,
+            "question": "وظيفة الـ \"Stub\" في جهة العميل (Client-side) هي:",
+            "options": [
+              "تنفيذ الكود البرمجي",
+              "تغليف البارامترات (Marshaling)",
+              "إدارة قواعد البيانات",
+              "تشفير القرص"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "تغليف البارامترات (Marshaling)",
+            "explanation": "الـ Stub على جانب العميل (client stub) مسؤول عن تجميع (marshalling) المعاملات (parameters) وإرسال الطلب عبر الشبكة."
+          },
+          {
+            "id": 37,
+            "question": "ما هو المصطلح الذي يصف قدرة النظام على التعامل مع كمية متزايدة من العمل بإضافة موارد؟",
+            "options": [
+              "Reliability",
+              "Scalability",
+              "Availability",
+              "Transparency"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Scalability",
+            "explanation": "قابلية التوسع (Scalability) هي قدرة النظام على استيعاب زيادة الحمل (بإضافة المزيد من الموارد) دون تدهور كبير في الأداء."
+          },
+          {
+            "id": 38,
+            "question": "الـ \"Race Condition\" تحدث غالباً بسبب غياب:",
+            "options": [
+              "الذاكرة الكافية",
+              "المزامنة (Synchronization)",
+              "سرعة الشبكة",
+              "الطاقة الكهربائية"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "المزامنة (Synchronization)",
+            "explanation": "تحدث حالة السباق عندما يعتمد الناتج النهائي على الترتيب الزمني غير المنضبط للوصول إلى مورد مشترك، وغياب آليات المزامنة الصحيحة يسمح بحدوثها."
+          },
+          {
+            "id": 39,
+            "question": "في مثلث CAP، ماذا يمثل حرف \"C\"؟",
+            "options": [
+              "Cloud",
+              "Consistency",
+              "Complexity",
+              "Capacity"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Consistency",
+            "explanation": "في نظرية CAP، يمثل C الاتساق (Consistency)، أي أن جميع العقد ترى نفس البيانات في نفس الوقت."
+          },
+          {
+            "id": 40,
+            "question": "أي خوارزمية تستخدم لمزامنة الوقت في الشبكات المحلية وتعتمد على خادم وقت مركزي؟",
+            "options": [
+              "Lamport",
+              "Christian's Algorithm",
+              "Bully",
+              "Paxos"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Christian's Algorithm",
+            "explanation": "خوارزمية Christian تستخدم خادم وقت مركزي (time server) يُفترض أن لديه وقتاً دقيقاً (مثل من ساعة ذرية أو GPS)."
+          },
+          {
+            "id": 41,
+            "question": "الـ \"Stateful Server\" هو الخادم الذي:",
+            "options": [
+              "ينسى العميل فور الرد",
+              "يحتفظ بمعلومات عن جلسة العميل",
+              "لا يحتاج لذاكرة",
+              "يعمل بدون نظام تشغيل"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "يحتفظ بمعلومات عن جلسة العميل",
+            "explanation": "الخادم ذو الحالة (Stateful) يحتفظ بحالة الجلسة (معلومات عن العميل والعمليات السابقة) بين الطلبات."
+          },
+          {
+            "id": 42,
+            "question": "الـ \"Vertical Scaling\" (التوسع الرأسي) يتم عبر:",
+            "options": [
+              "شراء أجهزة جديدة",
+              "إضافة معالجات أو ذاكرة للجهاز الحالي",
+              "تقليل عدد المستخدمين",
+              "توزيع البيانات"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "إضافة معالجات أو ذاكرة للجهاز الحالي",
+            "explanation": "التوسع العمودي (Vertical Scaling) أو Scale-up يعني ترقية خادم موجود بمعالجات أسرع، أو ذاكرة وصول عشوائي (RAM) أكبر، أو تخزين أسرع."
+          },
+          {
+            "id": 43,
+            "question": "الـ \"Mutual Exclusion\" تعني:",
+            "options": [
+              "السماح للجميع بالدخول",
+              "منع الجميع من الدخول",
+              "السماح لعنصر واحد فقط بالوصول للمورد",
+              "تبادل الرسائل بسرعة"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "السماح لعنصر واحد فقط بالوصول للمورد",
+            "explanation": "الاستبعاد المتبادل (Mutual Exclusion) يضمن أنه في أي وقت، يمكن لعملية واحدة فقط (أو خيط واحد) الوصول إلى مورد مشترك أو منطقة حرجة."
+          },
+          {
+            "id": 44,
+            "question": "أي من الأدوات التالية تستخدم لمنع \"Deadlock\"؟",
+            "options": [
+              "Banker's Algorithm",
+              "Bully Algorithm",
+              "NTP",
+              "RPC"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "Banker's Algorithm",
+            "explanation": "خوارزمية المصرفي (Banker's Algorithm) هي خوارزمية كلاسيكية تستخدم لتجنب الجمود (Deadlock Avoidance) عن طريق محاكاة تخصيص الموارد المستقبلي."
+          },
+          {
+            "id": 45,
+            "question": "الـ \"Latency\" في النظام الموزع تتأثر بـ:",
+            "options": [
+              "سرعة الضوء في الألياف",
+              "عدد القفزات (Hops) في الشبكة",
+              "سرعة معالجة الحزم",
+              "جميع ما سبق"
+            ],
+            "correctAnswer": 3,
+            "correctAnswerText": "جميع ما سبق",
+            "explanation": "الكمون (Latency) هو الوقت المستغرق لانتقال البيانات من نقطة إلى أخرى. يتأثر بالعوامل الفيزيائية (سرعة الضوء)، والبنية التحتية للشبكة (عدد القفزات، التوجيه)، وأداء العقد (معالجة الحزم)."
+          },
+          {
+            "id": 46,
+            "question": "نظام الـ \"NFS\" هو مثال على:",
+            "options": [
+              "نظام تشغيل",
+              "نظام ملفات موزع",
+              "متصفح إنترنت",
+              "لغة برمجة"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "نظام ملفات موزع",
+            "explanation": "نظام الملفات الشبكية (NFS - Network File System) هو بروتوكول نظام ملفات موزع تم تطويره بواسطة Sun Microsystems."
+          },
+          {
+            "id": 47,
+            "question": "في الـ \"Asynchronous Communication\"، المرسل:",
+            "options": [
+              "يتوقف حتى يصل الرد",
+              "يتابع عمله دون انتظار الرد",
+              "يغلق الجهاز",
+              "ينتظر إشارة من القائد"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "يتابع عمله دون انتظار الرد",
+            "explanation": "في الاتصال غير المتزامن، يرسل المرسل الرسالة ويستمر في تنفيذ مهام أخرى على الفور، دون حظر (blocking) لانتظار الاستجابة."
+          },
+          {
+            "id": 48,
+            "question": "الـ \"Replication Transparency\" تعني أن المستخدم:",
+            "options": [
+              "يعرف مكان كل نسخة",
+              "لا يشعر بوجود عدة نسخ من البيانات",
+              "هو من يقوم بعمل النسخ",
+              "يرى نسخة واحدة فقط دائمة الفشل"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "لا يشعر بوجود عدة نسخ من البيانات",
+            "explanation": "شفافية التكرار تعني أن وجود نسخ متعددة من البيانات مخفي عن المستخدم. يرى المستخدم مورداً منطقياً واحداً."
+          },
+          {
+            "id": 49,
+            "question": "الـ \"Message Queue\" مثل (RabbitMQ) يستخدم لـ:",
+            "options": [
+              "تخزين الملفات الكبيرة",
+              "الاتصال غير المتزامن وضمان توصيل الرسائل",
+              "تشريع المعالج",
+              "مزامنة الساعات"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "الاتصال غير المتزامن وضمان توصيل الرسائل",
+            "explanation": "أنظمة طابور الرسائل (Message Queues) تعمل كوسيط غير متزامن، توفر تخزين مؤقت وضمانات لتوصيل الرسائل بين المرسلين والمستقبلين."
+          },
+          {
+            "id": 50,
+            "question": "الـ \"Byzantine Fault\" هو الفشل الذي:",
+            "options": [
+              "تتوقف فيه العقدة تماماً",
+              "تعطي فيه العقدة بيانات خاطئة أو متناقضة عمدًا",
+              "تنقطع فيه الشبكة",
+              "تمتلئ فيه الذاكرة"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "تعطي فيه العقدة بيانات خاطئة أو متناقضة عمدًا",
+            "explanation": "فشل بيزنطي (Byzantine Fault) هو الأكثر تعقيداً، حيث قد يتصرف المكون المعيب بشكل تعسفي (خبيث) أو يعطي إجابات غير متسقة."
+          },
+          {
+            "id": 51,
+            "question": "الـ \"Multicore Processor\" يتواصل فيه النوى عبر:",
+            "options": [
+              "الرسائل الشبكية",
+              "الذاكرة المشتركة (Shared Memory)",
+              "الأقمار الصناعية",
+              "الكابلات الخارجية"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "الذاكرة المشتركة (Shared Memory)",
+            "explanation": "في المعالجات متعددة النواة (على نفس الرقاقة)، تتواصل النوى بشكل أساسي عبر الذاكرة المشتركة داخل المعالج."
+          },
+          {
+            "id": 52,
+            "question": "وظيفة الـ \"Load Balancer\" هي:",
+            "options": [
+              "زيادة وزن الأجهزة",
+              "توزيع حركة المرور على مجموعة من الخوادم",
+              "شحن البطاريات",
+              "تقليل عدد النسخ"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "توزيع حركة المرور على مجموعة من الخوادم",
+            "explanation": "موزع الحمل (Load Balancer) يوزع طلبات العملاء الواردة عبر مجموعة من الخوادم لتحسين استخدام الموارد والحد من الحمل على أي خادم واحد."
+          },
+          {
+            "id": 53,
+            "question": "الـ \"Logical Clock\" تزيد قيمتها عند:",
+            "options": [
+              "كل ثانية في الحقيقة",
+              "وقوع حدث أو إرسال/استقبال رسالة",
+              "إقلاع الجهاز",
+              "شروق الشمس"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "وقوع حدث أو إرسال/استقبال رسالة",
+            "explanation": "الساعة المنطقية (مثل Lamport Clock) تتقدم (زيادة في القيمة) مع حدوث أحداث ذات معنى داخل العملية، مثل إرسال أو استقبال رسالة."
+          },
+          {
+            "id": 54,
+            "question": "الـ \"Shared-Nothing Architecture\" تفضل في الأنظمة الضخمة لأنها:",
+            "options": [
+              "أرخص",
+              "تلغي نقطة الاختناق المركزية",
+              "أسهل في البرمجة",
+              "تعمل بدون كهرباء"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "تلغي نقطة الاختناق المركزية",
+            "explanation": "في بنية لا شيء مشترك (Shared-Nothing)، كل عقدة مستقلة، لذا لا توجد ذاكرة أو قرص مشترك يمكن أن يصبح نقطة اختناق أو فشل واحدة. هذا يسهل التوسع الأفقي."
+          },
+          {
+            "id": 55,
+            "question": "الـ \"Context Switching\" في الـ Threads:",
+            "options": [
+              "أسرع من الـ Processes",
+              "أبطأ من الـ Processes",
+              "يستغرق نفس الوقت",
+              "لا يحدث أبداً"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "أسرع من الـ Processes",
+            "explanation": "تبديل السياق بين الخيوط داخل نفس العملية أسرع بكثير لأنه لا يتطلب تغيير مساحة العناوين (تبديل جداول الصفحات)، حيث تتشارك الخيوط نفس مساحة الذاكرة."
+          },
+          {
+            "id": 56,
+            "question": "الـ \"Atomic Broadcast\" تضمن:",
+            "options": [
+              "وصول الرسالة لبعض العقد",
+              "وصول الرسالة للجميع بنفس الترتيب أو لا تصل لأحد",
+              "انفجار النظام",
+              "تشفير الرسالة"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "وصول الرسالة للجميع بنفس الترتيب أو لا تصل لأحد",
+            "explanation": "البث الذري (Atomic Broadcast) هو نموذج موثوق للاتصال يوفر ضمانات الإجماع: إذا وصلت رسالة ما إلى أي عقدة صحيحة، فإنها ستصل إلى جميع العقد الصحيحة، وبنفس الترتيب بالنسبة للرسائل الأخرى."
+          },
+          {
+            "id": 57,
+            "question": "نظام الـ \"BitTorrent\" هو مثال شهير على:",
+            "options": [
+              "Client-Server",
+              "Peer-to-Peer",
+              "Grid Computing",
+              "Cloud Computing"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Peer-to-Peer",
+            "explanation": "BitTorrent هو بروتوكول مشاركة ملفات نظير لنظير (P2P) شائع، حيث يقوم المستخدمون (الأقران) بتنزيل أجزاء الملف من بعضهم البعض وتحميلها إليهم."
+          },
+          {
+            "id": 58,
+            "question": "الـ \"Heartbeat Signal\" ترسل عادةً عبر بروتوكول سريع مثل:",
+            "options": [
+              "TCP",
+              "UDP",
+              "FTP",
+              "SMTP"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "UDP",
+            "explanation": "نظراً لأن إشارات نبضات القلب (Heartbeats) هي رسائل صغيرة ومتكررة، وغالباً ما يتم إرسالها عبر UDP، وهو بروتوكول أسرع وأخف وزناً لأنه لا يحتاج إلى اتصال أو تأكيدات."
+          },
+          {
+            "id": 59,
+            "question": "الـ \"Barrier Synchronization\" تستخدم عندما:",
+            "options": [
+              "نريد حماية النظام",
+              "نحتاج لانتظار جميع العقد لتنتهي من مرحلة قبل البدء في أخرى",
+              "نريد تقسيم الشبكة",
+              "نريد إيقاف المعالج"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "نحتاج لانتظار جميع العقد لتنتهي من مرحلة قبل البدء في أخرى",
+            "explanation": "مزامنة الحاجز (Barrier) تُستخدم في الحوسبة المتوازية والتوزيعية لضمان عدم بدء أي عقدة في المرحلة التالية من العملية حتى تكمل جميع العقد المرحلة الحالية."
+          },
+          {
+            "id": 60,
+            "question": "أي مما يلي يعد تحدياً أساسياً في النظم الموزعة؟",
+            "options": [
+              "عدم وجود ساعة عالمية",
+              "الفشل الجزئي للمكونات",
+              "تأخير الشبكة",
+              "جميع ما سبق"
+            ],
+            "correctAnswer": 3,
+            "correctAnswerText": "جميع ما سبق",
+            "explanation": "تحديات الأنظمة الموزعة الرئيسية تشمل: غياب الساعة العالمية المشتركة، احتمال حدوث فشل جزئي (عقدة أو رابط) دون أن يفشل النظام بأكمله، وتأخير الشبكة غير المتوقع وغير المتناسق."
+          }
+        ]
+      }
+    ]
+  }
+}

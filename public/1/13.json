@@ -1,0 +1,619 @@
+{
+  "quiz": {
+    "title": "اختبار النظم الموزعة والمتوازية - نموذج B7",
+    "sections": [
+      {
+        "name": "الجزء الأول: أسئلة الصواب والخطأ",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 1,
+            "question": "يهدف إلى جعل توزيع الموارد والعمليات مخفياً عن المستخدم (Transparency) Middleware الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الـ Middleware يوفر طبقة تجريد تخفي تعقيدات النظام الموزع، مما يوفر شفافية في الوصول للموارد والخدمات."
+          },
+          {
+            "id": 2,
+            "question": "يمكن للخادم أن يطلب خدمات من خوادم أخرى ليصبح هو \"عميلاً\" Client-Server الـ في أنظمة.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "نعم، في النظم متعددة الطبقات (Multi-tier)، يمكن للخادم أن يكون عميلاً لخادم آخر عند طلب خدمة."
+          },
+          {
+            "id": 3,
+            "question": "يقلل من وقت انتظار العميل لأنه لا يتطلب رداً فورياً Asynchronous RPC الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "في الـ Asynchronous RPC، يستمر العميل في العمل بعد إرسال الطلب دون انتظار الرد الفوري، مما يحسن الأداء."
+          },
+          {
+            "id": 4,
+            "question": "يتطلب توقف النظام (Downtime) غالباً لترقية المكونات الصلبة Vertical Scaling الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الترقية الرأسية تتضمن إضافة موارد (مثل RAM أو CPU) لجهاز موجود، وغالباً ما تتطلب إيقاف النظام."
+          },
+          {
+            "id": 5,
+            "question": "يتم التواصل بين العقد عبر تبادل الرسائل (Message Passing) Shared-Nothing نظام في.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "في هذه المعمارية، كل عقدة مستقلة ولا تشارك الذاكرة، لذا التواصل يتم عبر تمرير الرسائل فقط."
+          },
+          {
+            "id": 6,
+            "question": "هي خوارزمية موزعة كلياً لتحقيق الاستبعاد المتبادل (Mutual Exclusion) Ricart-Agrawala خوارزمية.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "هي خوارزمية لامركزية تعتمد على تبادل الرسائل لتحقيق الاستبعاد المتبادل في النظم الموزعة."
+          },
+          {
+            "id": 7,
+            "question": "تعتبر تطوراً طبيعياً لمفهوم الـ Grid Computing Cloud Computing الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "كلاهما يعتمدان على تجميع الموارد الحاسوبية، لكن الحوسبة السحابية تقدمها كخدمة مرنة وموحدة."
+          },
+          {
+            "id": 8,
+            "question": "الـ Write-through Cache أبطأ من الـ Write-back لأنه يحدّث الذاكرة الرئيسية فوراً.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "في Write-through، كل كتابة تحدث في الكاش والذاكرة الرئيسية معاً، مما يزيد زمن الكتابة مقارنة بـ Write-back."
+          },
+          {
+            "id": 9,
+            "question": "تميل دائماً للانحراف (Drift) بسبب الخصائص الفيزيائية للقطع الإلكترونية Physical Clocks الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الساعات الفيزيائية غير مثالية وتنحرف مع الزمن بسبب عوامل مثل الحرارة والجهد."
+          },
+          {
+            "id": 10,
+            "question": "لا يضمن عدم تكرار البيانات عند إعادة الإرسال HTTP في Idempotent POST الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "POST ليس Idempotent بطبيعته، لذا إعادة الإرسال قد تنشئ سجلات مكررة."
+          },
+          {
+            "id": 11,
+            "question": "تعني قدرة النظام على التعامل مع زيادة في عدد المستخدمين أو حجم البيانات Scalability الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "التوسع هو خاصية النظام للتعامل مع الحمل المتزايد دون تدهور كبير في الأداء."
+          },
+          {
+            "id": 12,
+            "question": "يساعد في موازنة الحمل (Load Balancing) وزيادة سرعة القراءة Replication الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "نسخ البيانات على عدة خوادم يوزع طلبات القراءة ويحسن الأداء والتوافر."
+          },
+          {
+            "id": 13,
+            "question": "في مثلث CAP، لا يمكن تحقيق الـ Availability والـ Consistency معاً عند حدوث انقسام للشبكة.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "نظرية CAP تقول: عند حدوث Partition، يجب الاختيار بين الاتساق (Consistency) والتوافر (Availability)."
+          },
+          {
+            "id": 14,
+            "question": "يضمن تسليم الرسائل إما للجميع أو لا أحد على الإطلاق Atomic Multicast الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "هو بروتوكول يضمن أن الرسالة تُسلم إما إلى كل المستقبلين أو لا تُسلم لأي منهم (All-or-nothing)."
+          },
+          {
+            "id": 15,
+            "question": "تتصل ببعضها عادةً باستخدام بروتوكولات خفيفة مثل HTTP/REST Microservices الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "تُبنى المعمارية الدقيقة غالباً باستخدام واجهات برمجة خفيفة مثل REST عبر HTTP."
+          },
+          {
+            "id": 16,
+            "question": "الـ Deadlock Prevention أكثر استهلاكاً للموارد من الـ Deadlock Detection.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الوقاية تتطلب تحليلاً مسبقاً وقيوداً على تخصيص الموارد، مما قد يقلل الكفاءة مقارنة بالكشف اللاحق."
+          },
+          {
+            "id": 17,
+            "question": "الـ DNS يستخدم التكرار (Replication) لتحقيق التوافر العالي والسرعة في الترجمة.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "يتم نسخ سجلات DNS على عدة خوادم لضمان التوافر وتقليل وقت الاستجابة."
+          },
+          {
+            "id": 18,
+            "question": "تسمح بتشغيل عدة أنظمة تشغيل مستقلة على نفس العتاد الفيزيائي Virtual Machines الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "المحاكاة الافتراضية تمكن من عزل وتشغيل أنظمة تشغيل متعددة على جهاز واحد."
+          },
+          {
+            "id": 19,
+            "question": "هو الوسيلة الوحيدة الممكنة لاكتشاف الفشل في النظم غير المتزامنة Time-out الـ.",
+            "correctAnswer": false,
+            "correctAnswerText": "خطأ",
+            "explanation": "هناك وسائل أخرى مثل Heartbeat أو Acknowledgments لاكتشاف الفشل، وليس Time-out هو الوحيد."
+          },
+          {
+            "id": 20,
+            "question": "يستهلك عرض نطاق (Bandwidth) أقل في الخادم المركزي مقارنة بـ Client-Server Peer-to-Peer الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "في P2P، يتم تبادل البيانات مباشرة بين الأقران، مما يقلل الحمل على أي خادم مركزي."
+          },
+          {
+            "id": 21,
+            "question": "الـ Context Switch بين الخيوط (Threads) لا يتطلب تغيير مساحة العناوين (Address Space).",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "الخيوط تشترك في مساحة العناوين نفسها، لذا التبديل بينها أخف من تبديل العمليات."
+          },
+          {
+            "id": 22,
+            "question": "هو نموذج اتساق قوي يتطلب ترتيباً صارماً للعمليات Sequential Consistency الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "يتطلب أن تنفذ العمليات بترتيب واحد مشترك يرضي ترتيب كل معالج."
+          },
+          {
+            "id": 23,
+            "question": "يرسل عادةً معلومات صغيرة جداً لتقليل استهلاك الشبكة Heartbeat الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "نبضات الحياة هي إشارات صغيرة دورية للتأكد من أن العقدة تعمل، وتُصمم لتكون خفيفة."
+          },
+          {
+            "id": 24,
+            "question": "هو فشل بسيط يتوقف فيه المعالج عن العمل تماماً Byzantine Fault الـ.",
+            "correctAnswer": false,
+            "correctAnswerText": "خطأ",
+            "explanation": "الفشل البيزنطي هو فشل عشوائي أو خبيث، وليس مجرد توقف بسيط."
+          },
+          {
+            "id": 25,
+            "question": "في لغات البرمجة يسمح باستدعاء كائنات موجودة في ذاكرة جهاز آخر RMI الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "RMI (Remote Method Invocation) يمكّن من استدعاء دوال كائنات عن بعد كما لو كانت محلية."
+          },
+          {
+            "id": 26,
+            "question": "يمكنه توزيع الطلبات بناءً على عنوان الـ IP الخاص بالعميل Load Balancer الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "موزعات الحمل تستخدم خوارزميات مختلفة، منها التوزيع حسب IP العميل."
+          },
+          {
+            "id": 27,
+            "question": "يجب أن تكون قصيرة قدر الإمكان لتقليل انتظار الخيوط الأخرى Critical Section الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "تقليل وقت القسم الحرج يحسن الإنتاجية ويقلل احتمالية حدوث التنافس."
+          },
+          {
+            "id": 28,
+            "question": "يعني انقطاع كلي للكهرباء عن مركز البيانات Network Partition الـ.",
+            "correctAnswer": false,
+            "correctAnswerText": "خطأ",
+            "explanation": "Partition هو انقسام الشبكة إلى جزأين معزولين، وليس بالضرورة انقطاع كهرباء."
+          },
+          {
+            "id": 29,
+            "question": "يحتاج إلى تخزين \"معرّف الجلسة\" (Session ID) في ذاكرته المحلية Stateless Server الـ.",
+            "correctAnswer": false,
+            "correctAnswerText": "خطأ",
+            "explanation": "الخادم عديم الحالة لا يخزن حالة الجلسة محلياً، بل يعتمد على البيانات المرسلة مع كل طلب."
+          },
+          {
+            "id": 30,
+            "question": "ضروري في النظم الموزعة بسبب غياب الساعة المشتركة والذاكرة المشتركة Synchronization الـ.",
+            "correctAnswer": true,
+            "correctAnswerText": "صح",
+            "explanation": "التزامن ضروري لتنسيق العمليات في بيئة لا توجد فيها ساعة أو ذاكرة موحدة."
+          }
+        ]
+      },
+      {
+        "name": "الجزء الثاني: أسئلة الاختيار من متعدد",
+        "difficulty": "mixed",
+        "questions": [
+          {
+            "id": 31,
+            "question": "أي نوع من أنواع الشفافية (Transparency) يخفي حقيقة أن المورد مكرر في عدة أماكن؟",
+            "options": [
+              "Access Transparency",
+              "Replication Transparency",
+              "Migration Transparency",
+              "Failure Transparency"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Replication Transparency",
+            "explanation": "شفافية التكرار تخفي عن المستخدم وجود نسخ متعددة من المورد."
+          },
+          {
+            "id": 32,
+            "question": "المعمارية التي تعتمد على تقسيم التطبيق إلى طبقات (Presentation, Business, Data) تسمى:",
+            "options": [
+              "Single-tier",
+              "Multi-tier",
+              "P2P",
+              "Shared Memory"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Multi-tier",
+            "explanation": "النظام متعدد الطبقات يفصل واجهة المستخدم، المنطق التجاري، وطبقة البيانات."
+          },
+          {
+            "id": 33,
+            "question": "المصطلح الذي يصف \"استحواذ عملية على مورد وانتظارها لآخر\" هو:",
+            "options": [
+              "Preemption",
+              "Hold and Wait",
+              "Mutual Exclusion",
+              "Circular Wait"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Hold and Wait",
+            "explanation": "هي إحدى شروط حصول التعادل (Deadlock)، حيث العملية تحتجز مورداً وتنتظر آخر."
+          },
+          {
+            "id": 34,
+            "question": "الـ \"Middleware\" يهدف بشكل أساسي إلى:",
+            "options": [
+              "زيادة سرعة الإنترنت",
+              "توفير بيئة متجانسة فوق أنظمة مختلفة",
+              "تشفير القرص",
+              "حذف الملفات"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "توفير بيئة متجانسة فوق أنظمة مختلفة",
+            "explanation": "الـ Middleware يوفر طبقة تجريد توحد التعامل مع أنظمة وتقنيات مختلفة."
+          },
+          {
+            "id": 35,
+            "question": "أي نموذج اتساق يضمن أن التحديثات التي قام بها المستخدم نفسه ستظهر له فوراً؟",
+            "options": [
+              "Eventual Consistency",
+              "Read-your-writes Consistency",
+              "Weak Consistency",
+              "Causal Consistency"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Read-your-writes Consistency",
+            "explanation": "يضمن أن أي عملية كتابة يقوم بها المستخدم ستظهر له مباشرة عند القراءة اللاحقة."
+          },
+          {
+            "id": 36,
+            "question": "وظيفة الـ \"Stub\" في جهة الخادم (Server-side) تسمى غالباً:",
+            "options": [
+              "Stub",
+              "Skeleton",
+              "Proxy",
+              "Dispatcher"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Skeleton",
+            "explanation": "في RPC/RMI، الـ Skeleton هو المكون الذي يستقبل الطلبات على الخادم وينشط الكائن المناسب."
+          },
+          {
+            "id": 37,
+            "question": "أي خوارزمية انتخاب تعتمد على تمرير رسالة في حلقة دائرية؟",
+            "options": [
+              "Bully Algorithm",
+              "Ring Algorithm",
+              "Paxos",
+              "NTP"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Ring Algorithm",
+            "explanation": "خوارزمية الحلقة تعتمد على تمرير رسالة في شبكة على شكل حلقة لانتخاب منسق."
+          },
+          {
+            "id": 38,
+            "question": "الـ \"Throughput\" في النظم المتوازية يتأثر سلباً بـ:",
+            "options": [
+              "زيادة الذاكرة",
+              "تكاليف الاتصال (Communication Overhead)",
+              "سرعة الشاشة",
+              "حجم الصندوق"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "تكاليف الاتصال (Communication Overhead)",
+            "explanation": "زيادة التواصل بين المعالجات يستهلك وقتاً وموارد، مما يقلل الإنتاجية الكلية."
+          },
+          {
+            "id": 39,
+            "question": "في مثلث CAP، ماذا يمثل حرف \"A\"؟",
+            "options": [
+              "Atomicity",
+              "Availability",
+              "Accuracy",
+              "Authority"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Availability",
+            "explanation": "الحرف A في CAP يرمز إلى التوافر (Availability)."
+          },
+          {
+            "id": 40,
+            "question": "الـ \"NTP\" يستخدم لمزامنة:",
+            "options": [
+              "الملفات",
+              "الساعات الفيزيائية",
+              "قواعد البيانات",
+              "كلمات المرور"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "الساعات الفيزيائية",
+            "explanation": "بروتوكول وقت الشبكة (NTP) يستخدم لمزامنة الساعات عبر الإنترنت."
+          },
+          {
+            "id": 41,
+            "question": "الـ \"Horizontal Scaling\" يتم عن طريق:",
+            "options": [
+              "إضافة رام للجهاز",
+              "إضافة أجهزة جديدة (Nodes)",
+              "تغيير المعالج",
+              "مسح البيانات"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "إضافة أجهزة جديدة (Nodes)",
+            "explanation": "التوسع الأفقي يعني إضافة عقد (أجهزة) جديدة للنظام."
+          },
+          {
+            "id": 42,
+            "question": "الـ \"Message Queue\" يوفر اتصالاً:",
+            "options": [
+              "متزامناً",
+              "غير متزامن (Asynchronous)",
+              "لحظياً",
+              "سلكياً فقط"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "غير متزامن (Asynchronous)",
+            "explanation": "طابور الرسائل يفصل بين المرسل والمستقبل، مما يوفر تواصلاً غير متزامن."
+          },
+          {
+            "id": 43,
+            "question": "أي من التالي يعتبر مثالاً على نظام الذاكرة المشتركة (Shared Memory)؟",
+            "options": [
+              "Cluster",
+              "Multi-core CPU",
+              "Grid Computing",
+              "P2P Network"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "Multi-core CPU",
+            "explanation": "المعالجات متعددة النوى تشترك في ذاكرة رئيسية واحدة."
+          },
+          {
+            "id": 44,
+            "question": "الـ \"Deadlock\" يمكن حله عن طريق:",
+            "options": [
+              "قتل إحدى العمليات (Process Termination)",
+              "سحب المورد بالقوة (Preemption)",
+              "التراجع عن العمليات (Rollback)",
+              "جميع ما سبق"
+            ],
+            "correctAnswer": 3,
+            "correctAnswerText": "جميع ما سبق",
+            "explanation": "كل الطرق المذكورة تستخدم في معالجة التعادل حسب الموقف."
+          },
+          {
+            "id": 45,
+            "question": "الـ \"DNS\" يعمل بشكل أساسي في الطبقة:",
+            "options": [
+              "الفيزيائية",
+              "الشبكة",
+              "التطبيقات (Application Layer)",
+              "النقل"
+            ],
+            "correctAnswer": 2,
+            "correctAnswerText": "التطبيقات (Application Layer)",
+            "explanation": "DNS هو بروتوكول طبقة التطبيقات في نموذج OSI/TCP-IP."
+          },
+          {
+            "id": 46,
+            "question": "مشكلة الـ \"Race Condition\" تحدث عندما تتنافس الخيوط على:",
+            "options": [
+              "القراءة فقط",
+              "تحديث مورد مشترك في نفس الوقت",
+              "إغلاق الجهاز",
+              "زيادة السرعة"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "تحديث مورد مشترك في نفس الوقت",
+            "explanation": "تحدث حالة السباق عند محاولة خيطين أو أكثر تعديل بيانات مشتركة دون تنسيق."
+          },
+          {
+            "id": 47,
+            "question": "الـ \"Logical Clocks\" تهدف إلى:",
+            "options": [
+              "معرفة الوقت في مكة",
+              "ترتيب الأحداث (Partial Ordering)",
+              "قياس الحرارة",
+              "شحن البطارية"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "ترتيب الأحداث (Partial Ordering)",
+            "explanation": "الساعات المنطقية تُستخدم لترتيب الأحداث في النظم الموزعة، وليس لمعرفة الوقت الفعلي."
+          },
+          {
+            "id": 48,
+            "question": "الـ \"Stateless Server\" يعتبر أسهل في التوسع لأن:",
+            "options": [
+              "الخادم لا يخزن بيانات العميل",
+              "الخادم سريع جداً",
+              "العميل لا يرسل طلبات",
+              "الشبكة لا تنقطع"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "الخادم لا يخزن بيانات العميل",
+            "explanation": "غياب الحالة يسمح بتوجيه أي طلب لأي خادم، مما يسهل التوزيع والتوسع."
+          },
+          {
+            "id": 49,
+            "question": "الـ \"Atomic Commitment\" يعني:",
+            "options": [
+              "أن العملية تنفذ جزئياً",
+              "أن العملية تنفذ بالكامل في كل العقد أو لا تنفذ أبداً",
+              "أن العملية تحذف",
+              "أن العملية تتكرر"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "أن العملية تنفذ بالكامل في كل العقد أو لا تنفذ أبداً",
+            "explanation": "الالتزام الذري يضمن أن الحركة الموزعة تنفذ بالكامل في كل الأطراف أو تتراجع بالكامل."
+          },
+          {
+            "id": 50,
+            "question": "الـ \"Byzantine Generals Problem\" تتعلق بـ:",
+            "options": [
+              "سرعة الخيول",
+              "الاتفاق في وجود عقد فاشلة أو خبيثة",
+              "مساحة المعركة",
+              "تشفير الرسائل"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "الاتفاق في وجود عقد فاشلة أو خبيثة",
+            "explanation": "هي مشكلة توافق في النظم الموزعة عند وجود عقد معيبة أو خبيثة."
+          },
+          {
+            "id": 51,
+            "question": "الـ \"UDP\" يستخدم في:",
+            "options": [
+              "نقل الملفات الحساسة",
+              "البث المباشر (Streaming)",
+              "البريد الإلكتروني",
+              "البنوك"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "البث المباشر (Streaming)",
+            "explanation": "UDP سريع ولا يتطلب تأكيداً، لذا يُفضل في البث المباشر والألعاب."
+          },
+          {
+            "id": 52,
+            "question": "وظيفة الـ \"Load Balancer\" هي:",
+            "options": [
+              "حماية الأجهزة من الصدمات",
+              "توزيع الطلبات لضمان كفاءة النظام",
+              "زيادة استهلاك الطاقة",
+              "تقليل عدد المعالجات"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "توزيع الطلبات لضمان كفاءة النظام",
+            "explanation": "موزع الحمل يوزع الطلبات الواردة على عدة خوادم لتحسين الأداء والتوافر."
+          },
+          {
+            "id": 53,
+            "question": "الـ \"Shared-Nothing Architecture\" هي ميزة في:",
+            "options": [
+              "Mainframes",
+              "الأنظمة الموزعة واسعة النطاق (Scalable Systems)",
+              "المعالج الواحد",
+              "الذاكرة المحلية"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "الأنظمة الموزعة واسعة النطاق (Scalable Systems)",
+            "explanation": "معمارية Shared-Nothing تعتمد على عقد مستقلة، مما يجعلها قابلة للتوسع الأفقي بسهولة."
+          },
+          {
+            "id": 54,
+            "question": "الـ \"Spinlock\" هو قفل يجعل المعالج:",
+            "options": [
+              "ينام",
+              "يستمر في فحص الشرط (Busy Waiting)",
+              "يتوقف عن العمل",
+              "يغلق البرنامج"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "يستمر في فحص الشرط (Busy Waiting)",
+            "explanation": "الـ Spinlock يجعل الخيط في حلقة انتظار نشط يفحص متغير القفل باستمرار."
+          },
+          {
+            "id": 55,
+            "question": "الـ \"RMI\" يختلف عن الـ RPC في أنه:",
+            "options": [
+              "أبطأ",
+              "يعمل مع الكائنات (Objects)",
+              "لا يحتاج لشبكة",
+              "مخصص للملفات فقط"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "يعمل مع الكائنات (Objects)",
+            "explanation": "RMI هو امتداد لـ RMC يدعم استدعاء دوال الكائنات عن بعد في لغات كـ Java."
+          },
+          {
+            "id": 56,
+            "question": "الـ \"Fault Tolerance\" يتم تحقيقها غالباً عبر:",
+            "options": [
+              "التكرار (Redundancy/Replication)",
+              "تقليل الأجهزة",
+              "زيادة السرعة",
+              "تغيير اللغة"
+            ],
+            "correctAnswer": 0,
+            "correctAnswerText": "التكرار (Redundancy/Replication)",
+            "explanation": "التكرار هو أسلوب أساسي لتحقيق تحمل الأخطاء (Fault Tolerance)."
+          },
+          {
+            "id": 57,
+            "question": "الـ \"Critical Section\" هي منطقة في البرمجية:",
+            "options": [
+              "مخصصة للرسوم",
+              "لا يجب دخولها من أكثر من خيط في وقت واحد",
+              "مخصصة للقراءة فقط",
+              "يتم حذفها عند الانتهاء"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "لا يجب دخولها من أكثر من خيط في وقت واحد",
+            "explanation": "القسم الحرج هو جزء من الكود يصل لبيانات مشتركة، ويجب حمايته لضمان التزامن."
+          },
+          {
+            "id": 58,
+            "question": "الـ \"Barrier\" تستخدم لمزامنة:",
+            "options": [
+              "سرعة الإنترنت",
+              "تقدم الخيوط عند نقطة محددة",
+              "حجم الملفات",
+              "شاشات العرض"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "تقدم الخيوط عند نقطة محددة",
+            "explanation": "الحاجز (Barrier) يجبر مجموعة خيوط على الانتظار حتى تصل كلها لنقطة معينة قبل المتابعة."
+          },
+          {
+            "id": 59,
+            "question": "الـ \"Marshaling\" هو تحويل البيانات إلى:",
+            "options": [
+              "نصوص",
+              "تنسيق قابل للنقل عبر الشبكة",
+              "أرقام سرية",
+              "صور"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "تنسيق قابل للنقل عبر الشبكة",
+            "explanation": "التجميع (Marshaling) هو عملية تحويل كائن أو بيانات إلى تنسيق مناسب للنقل أو التخزين."
+          },
+          {
+            "id": 60,
+            "question": "نظام الـ \"Grid Computing\" يستخدم غالباً لـ:",
+            "options": [
+              "تصفح فيسبوك",
+              "المهام العلمية التي تتطلب قدرات حوسبة هائلة",
+              "كتابة ملفات وورد",
+              "تشغيل الألعاب البسيطة"
+            ],
+            "correctAnswer": 1,
+            "correctAnswerText": "المهام العلمية التي تتطلب قدرات حوسبة هائلة",
+            "explanation": "الحوسبة الشبكية تجمع موارد حاسوبية موزعة لحل مسائل علمية ضخمة."
+          }
+        ]
+      }
+    ]
+  }
+}

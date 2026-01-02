@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, CheckCircle, XCircle, Award, RefreshCw, AlertCircle, Volume2, VolumeX } from 'lucide-react';
+import { ChevronRight, CheckCircle, XCircle, Award, RefreshCw, AlertCircle, Volume2, VolumeX, BookOpen } from 'lucide-react';
 
 interface Question {
   id: number;
@@ -9,6 +9,7 @@ interface Question {
   options?: string[];
   correctAnswer: number | boolean;
   correctAnswerText: string;
+  explanation?: string;
 }
 
 interface Section {
@@ -29,7 +30,7 @@ interface QuizClientProps {
   courseId: string;
 }
 
-export default function QuizClient({ quizId ,courseId}: QuizClientProps) {
+export default function QuizClient({ quizId, courseId }: QuizClientProps) {
   const [quizData, setQuizData] = useState<QuizData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -68,16 +69,16 @@ export default function QuizClient({ quizId ,courseId}: QuizClientProps) {
       try {
         setLoading(true);
         setError(null);
-        
+
         const response = await fetch(`/${courseId}/${quizId}.json`);
-        
+
         if (!response.ok) {
           throw new Error('فشل تحميل الاختبار');
         }
-        
+
         const data: QuizData = await response.json();
         setQuizData(data);
-        
+
         // Flatten all questions from all sections
         const questions: any[] = [];
         data.quiz.sections.forEach(section => {
@@ -114,22 +115,22 @@ export default function QuizClient({ quizId ,courseId}: QuizClientProps) {
 
   const handleSubmitAnswer = () => {
     if (selectedAnswer === null) return;
-    
+
     const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
-    
+
     setUserAnswers([...userAnswers, {
       questionId: currentQuestion.id,
       selectedAnswer,
       isCorrect
     }]);
-    
+
     if (isCorrect) {
       setScore(score + 1);
     }
-    
+
     // Play sound effect
     playSound(isCorrect);
-    
+
     setIsAnswered(true);
   };
 
@@ -208,7 +209,7 @@ export default function QuizClient({ quizId ,courseId}: QuizClientProps) {
           <p className="text-2xl font-semibold text-gray-700 mb-8">
             {getScoreMessage()}
           </p>
-          
+
           <div className="space-y-3 mb-8 text-right max-h-96 overflow-y-auto">
             {allQuestions.map((q, idx) => {
               const userAnswer = userAnswers.find(a => a.questionId === q.id);
@@ -233,182 +234,196 @@ export default function QuizClient({ quizId ,courseId}: QuizClientProps) {
               );
             })}
           </div>
-          
-          <button
-            onClick={handleRestart}
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2 mx-auto"
-          >
-            <RefreshCw className="w-5 h-5" />
-            إعادة الاختبار
-          </button>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <button
+              onClick={handleRestart}
+              className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
+            >
+              <RefreshCw className="w-5 h-5" />
+              إعادة الاختبار
+            </button>
+
+            <Link
+              href={`/courses/${courseId}`}
+              className="bg-white text-gray-700 border border-gray-200 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center justify-center gap-2"
+            >
+              <BookOpen className="w-5 h-5" />
+              العودة للكورس
+            </Link>
+          </div>
         </div>
       </div>
     );
   }
 
-return (
-  <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-4 px-2">
-    <div className="max-w-2xl mx-auto">
-      {/* Header */}
-      <div className="bg-white rounded-t-xl shadow-md p-4 mb-0">
-        <div className="flex justify-between items-start mb-2">
-          <h1 className="text-xl font-bold text-gray-800 flex-1 text-center">
-            {quizData.quiz.title}
-          </h1>
-          <button
-            onClick={() => setSoundEnabled(!soundEnabled)}
-            className="p-1 rounded-md hover:bg-gray-100 transition-colors"
-            title={soundEnabled ? 'تعطيل الصوت' : 'تفعيل الصوت'}
-          >
-            {soundEnabled ? (
-              <Volume2 className="w-5 h-5 text-blue-600" />
-            ) : (
-              <VolumeX className="w-5 h-5 text-gray-400" />
-            )}
-          </button>
-        </div>
-        <div className="flex justify-between items-center text-xs text-gray-600">
-          <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
-            السؤال {currentQuestionIndex + 1} من {totalQuestions}
-          </span>
-          <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
-            النقاط: {score}
-          </span>
-          <Link
-            href="/"
-            className=" text-indigo-600 hover:text-indigo-700 font-medium"
-          >
-            <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium">
-            العودة
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-4 px-2">
+      <div className="max-w-2xl mx-auto">
+        {/* Header */}
+        <div className="bg-white rounded-t-xl shadow-md p-4 mb-0">
+          <div className="flex justify-between items-start mb-2">
+            <h1 className="text-xl font-bold text-gray-800 flex-1 text-center">
+              {quizData.quiz.title}
+            </h1>
+            <button
+              onClick={() => setSoundEnabled(!soundEnabled)}
+              className="p-1 rounded-md hover:bg-gray-100 transition-colors"
+              title={soundEnabled ? 'تعطيل الصوت' : 'تفعيل الصوت'}
+            >
+              {soundEnabled ? (
+                <Volume2 className="w-5 h-5 text-blue-600" />
+              ) : (
+                <VolumeX className="w-5 h-5 text-gray-400" />
+              )}
+            </button>
+          </div>
+          <div className="flex justify-between items-center text-xs text-gray-600">
+            <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+              السؤال {currentQuestionIndex + 1} من {totalQuestions}
             </span>
-          </Link>
+            <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
+              النقاط: {score}
+            </span>
+            <Link
+              href="/"
+              className=" text-indigo-600 hover:text-indigo-700 font-medium"
+            >
+              <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium">
+                العودة
+              </span>
+            </Link>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="mt-3 bg-gray-200 rounded-full h-2 overflow-hidden">
+            <div
+              className="bg-gradient-to-r from-blue-500 to-indigo-600 h-full transition-all duration-300"
+              style={{ width: `${((currentQuestionIndex + 1) / totalQuestions) * 100}%` }}
+            />
+          </div>
         </div>
 
-        {/* Progress Bar */}
-        <div className="mt-3 bg-gray-200 rounded-full h-2 overflow-hidden">
-          <div
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 h-full transition-all duration-300"
-            style={{ width: `${((currentQuestionIndex + 1) / totalQuestions) * 100}%` }}
-          />
-        </div>
-      </div>
+        {/* Question Card */}
+        <div className="bg-white rounded-b-xl shadow-md p-5">
+          <div className="mb-4">
+            <span className="inline-block bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-[11px] font-medium mb-2">
+              {currentQuestion.sectionName}
+            </span>
+            <h2 className="text-lg font-bold text-gray-800 text-right leading-snug">
+              {currentQuestion.question}
+            </h2>
+          </div>
 
-      {/* Question Card */}
-      <div className="bg-white rounded-b-xl shadow-md p-5">
-        <div className="mb-4">
-          <span className="inline-block bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-[11px] font-medium mb-2">
-            {currentQuestion.sectionName}
-          </span>
-          <h2 className="text-lg font-bold text-gray-800 text-right leading-snug">
-            {currentQuestion.question}
-          </h2>
-        </div>
-
-        {/* Answer Options */}
-        <div className="space-y-2 mb-4 font-bold">
-          {isTrueFalse ? (
-            <>
-              <button
-                onClick={() => handleAnswerSelect(true)}
-                disabled={isAnswered}
-                className={`w-full text-right p-3 rounded-lg border transition-all text-xl text-blue-950  ${
-                  selectedAnswer === true
+          {/* Answer Options */}
+          <div className="space-y-2 mb-4 font-bold">
+            {isTrueFalse ? (
+              <>
+                <button
+                  onClick={() => handleAnswerSelect(true)}
+                  disabled={isAnswered}
+                  className={`w-full text-right p-3 rounded-lg border transition-all text-xl text-blue-950  ${selectedAnswer === true
                     ? isAnswered
                       ? currentQuestion.correctAnswer === true
                         ? 'bg-green-100 border-green-500'
                         : 'bg-red-100 border-red-500'
                       : 'bg-blue-100 border-blue-500'
                     : isAnswered && currentQuestion.correctAnswer === true
-                    ? 'bg-green-50 border-green-300'
-                    : 'bg-gray-50 border-gray-300 hover:border-blue-300 hover:bg-blue-50'
-                } ${isAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-              >
-                ✓ صح
-              </button>
-              <button
-                onClick={() => handleAnswerSelect(false)}
-                disabled={isAnswered}
-                className={`w-full text-right p-3 rounded-lg border transition-all text-sm ${
-                  selectedAnswer === false
+                      ? 'bg-green-50 border-green-300'
+                      : 'bg-gray-50 border-gray-300 hover:border-blue-300 hover:bg-blue-50'
+                    } ${isAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                >
+                  ✓ صح
+                </button>
+                <button
+                  onClick={() => handleAnswerSelect(false)}
+                  disabled={isAnswered}
+                  className={`w-full text-right p-3 rounded-lg border transition-all text-sm ${selectedAnswer === false
                     ? isAnswered
                       ? currentQuestion.correctAnswer === false
                         ? 'bg-green-100 border-green-500'
                         : 'bg-red-100 border-red-500'
                       : 'bg-blue-100 border-blue-500'
                     : isAnswered && currentQuestion.correctAnswer === false
-                    ? 'bg-green-50 border-green-300'
-                    : 'bg-gray-50 border-gray-300 hover:border-blue-300 hover:bg-blue-50'
-                } ${isAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-              >
-                ✗ خطأ
-              </button>
-            </>
-          ) : (
-            currentQuestion.options.map((option: string, index: number) => (
-              <button
-                key={index}
-                onClick={() => handleAnswerSelect(index)}
-                disabled={isAnswered}
-                className={`w-full text-right p-3 rounded-lg border transition-all text-sm ${
-                  selectedAnswer === index
+                      ? 'bg-green-50 border-green-300'
+                      : 'bg-gray-50 border-gray-300 hover:border-blue-300 hover:bg-blue-50'
+                    } ${isAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                >
+                  ✗ خطأ
+                </button>
+              </>
+            ) : (
+              currentQuestion.options.map((option: string, index: number) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswerSelect(index)}
+                  disabled={isAnswered}
+                  className={`w-full text-right p-3 rounded-lg border transition-all text-sm ${selectedAnswer === index
                     ? isAnswered
                       ? index === currentQuestion.correctAnswer
                         ? 'bg-green-100 border-green-500'
                         : 'bg-red-100 border-red-500'
                       : 'bg-blue-100 border-blue-500'
                     : isAnswered && index === currentQuestion.correctAnswer
-                    ? 'bg-green-50 border-green-300'
-                    : 'bg-gray-50 border-gray-300 hover:border-blue-300 hover:bg-blue-50'
-                } ${isAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-              >
-                {option}
-              </button>
-            ))
-          )}
-        </div>
+                      ? 'bg-green-50 border-green-300'
+                      : 'bg-gray-50 border-gray-300 hover:border-blue-300 hover:bg-blue-50'
+                    } ${isAnswered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                >
+                  {option}
+                </button>
+              ))
+            )}
+          </div>
 
-        {/* Feedback */}
-        {isAnswered && (
-          <div
-            className={`p-3 rounded-lg mb-4 text-sm ${
-              userAnswers[userAnswers.length - 1]?.isCorrect
+          {/* Feedback */}
+          {isAnswered && (
+            <div
+              className={`p-3 rounded-lg mb-4 text-sm ${userAnswers[userAnswers.length - 1]?.isCorrect
                 ? 'bg-green-100 border border-green-300'
                 : 'bg-red-100 border border-red-300'
-            }`}
-          >
-            <p className="text-right font-medium">
-              {userAnswers[userAnswers.length - 1]?.isCorrect
-                ? '✓ إجابة صحيحة!'
-                : `✗ إجابة خاطئة. الإجابة الصحيحة: ${currentQuestion.correctAnswerText}`}
-            </p>
-          </div>
-        )}
-
-        {/* Buttons */}
-        <div className="flex gap-2">
-          {!isAnswered ? (
-            <button
-              onClick={handleSubmitAnswer}
-              disabled={selectedAnswer === null}
-              className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-md font-semibold text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-md transition-all"
+                }`}
             >
-              تأكيد
-            </button>
-          ) : (
-            <button
-              onClick={handleNextQuestion}
-              className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-md font-semibold text-sm hover:shadow-md transition-all flex items-center justify-center gap-1"
-            >
-              {currentQuestionIndex < totalQuestions - 1
-                ? 'التالي'
-                : 'عرض النتيجة'}
-              <ChevronRight className="w-4 h-4" />
-            </button>
+              <p className="text-right font-medium">
+                {userAnswers[userAnswers.length - 1]?.isCorrect
+                  ? '✓ إجابة صحيحة!'
+                  : `✗ إجابة خاطئة. الإجابة الصحيحة: ${currentQuestion.correctAnswerText}`}
+              </p>
+              {currentQuestion.explanation && (
+                <div className="mt-2 pt-2 border-t border-gray-200/50">
+                  <p className="text-right text-gray-700">
+                    <span className="font-bold ml-1">الشرح:</span>
+                    {currentQuestion.explanation}
+                  </p>
+                </div>
+              )}
+            </div>
           )}
+
+          {/* Buttons */}
+          <div className="flex gap-2">
+            {!isAnswered ? (
+              <button
+                onClick={handleSubmitAnswer}
+                disabled={selectedAnswer === null}
+                className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-md font-semibold text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-md transition-all"
+              >
+                تأكيد
+              </button>
+            ) : (
+              <button
+                onClick={handleNextQuestion}
+                className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-md font-semibold text-sm hover:shadow-md transition-all flex items-center justify-center gap-1"
+              >
+                {currentQuestionIndex < totalQuestions - 1
+                  ? 'التالي'
+                  : 'عرض النتيجة'}
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
 
 }
